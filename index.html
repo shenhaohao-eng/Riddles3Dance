@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <title>Riddles Three Dance Co</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+                
+        <link rel="stylesheet" href="R3_styles.css" />
+        <link rel="icon" href="Images/R3_favicon.png" type="image/png">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        
+        <div class="page-wrapper">
+            
+            <!-- Backrgound -->
+            <div class="background"></div>
+                
+            <!-- Camera overlay -->
+            <div class="camera-overlay"></div>
+            
+            <div id="menu-container"></div>
+            
+            <!-- Menu -->
+            <div class="menu-section">
+                <button class="menu-toggle">☰ Menu</button>
+                <nav class="menu">
+                    <a href="#">Home </a>
+
+                    <div class="about-dropdown">
+                        <a href="#">About </a>
+                        <div class="about-dropdown-content">
+                            <a href="#">Persi </a>
+                            <a href="#">Dancers </a>        
+                        </div>
+                    </div>
+
+                    <a href="#">Gallery </a>
+                    <a href="#">Contact </a>
+                    <a href="#">Support</a>
+                </nav>
+            </div>
+            
+            
+            <!-- Main Content -->
+            <div class="content-wrapper">
+                        
+                <header><h1>New Season! New Website! (╯°□°）╯</h1></header>        
+                <div class="content-LR-wrapper">
+                    <div class="content-left">
+                        <header><h2><span style="text-decoration: underline;">Upcoming Events</span></h2></header>
+                        
+                        <div class="event-title">
+                            SMCDT DANCE HUNGER ACTION FESTIVAL
+                            <br />2025-SEP-06 | 7:30PM
+                        </div>
+                        <div class="event-desc">
+                            Catch us in the "Professional Dance Concert" on Day 2 of
+                            Social Movement Contemporary Dance Theater's "Dance|Hunger|Action" festival at MATCH!
+                            <a href="https://matchouston.org/events/2025/dance-hunger-action-festival">-LINK-</a>
+                        </div>
+                        <br />
+                        <div class="event-title">
+                            BRAZOS CONTEMPORARY DANCE FESTIVAL AT TEXAS A&amp;M
+                            <br />2025-SEP-19 | 7:00PM
+                            <br />2025-SEP-20 | 7:00PM
+                        </div>
+                        <div class="event-desc">
+                            Friday and Saturday nights! 
+                            <a href="https://pvfa.tamu.edu/event/brazos-contemporary-dance-festival/">-LINK-</a>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="content-right">
+                        <header><h2>~~ Open Classes! ~~</h2></header>
+                        CONDITIONING FOR CONTEMPORARY TECHNIQUES
+                        <br /><mark><span style="font-weight: bold;"> EVERY TUES &amp; THURS</span></mark>
+                        <br /><mark><span style="font-weight: bold;"> @HOUSTON MET DANCE</span></mark>
+                        <br /><mark><span style="font-weight: bold;"> 9:00AM-11:30AM</span></mark>
+                        <br /><a href="https://www.metdance.org/ci-and-contemporary-conditioning">https://www.metdance.org/ci-and-contemporary-conditioning</a>
+                        <br /> Led by Persi Mey
+                        <br />
+                        <br /> Want to get strong?
+                        Want to roll around on the floor with style?
+                        Come join us for open class,
+                        made accessible for any skill level.
+                        Check the Met-Dance website for current schedule (link above)
+                        Pre-registration not required! Just show up!
+                    </div>
+                </div>
+                
+                <div class="banner1">
+                    <header><h2>SEASON 2 IS HERE!</h2></header>
+                    Fall 2025 is Season 2 for Riddles Three and we are super excited for whats cookin
+                    <br /><br />
+                    Stay tuned
+                    <br /><br />
+                    It's gonna be legit
+                    <br /><br />
+                    <br /><br />
+                    Do you know why skeletons don't fight each other?
+                    <br />
+                    <button onclick="buttonClicked()">Why?</button>
+                    <br /><br />
+                    <div id="exbuttonDiv"></div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <br /><br />
+            .Updated Aug 2025.
+            <br /><br />
+            Follow us on Instagram!
+            <img src="images/insta_logo_white.png" style="width: 100px; height: auto;" alt="@_riddles_three_">
+        </div>
+        
+    
+    <!-- LOAD MENU DYNAMICALLY
+    <script>
+    fetch('R3_menu.html')
+      .then(function(response){ return response.text()})  // Get the HTML as text
+      .then(function(html){
+        document.getElementById('menu-container').innerHTML = html;
+      })
+      .catch(function(error){ return console.error('Error loading menu:', error)});
+    </script>
+    -->
+        
+    <!-- MENU DROP DOWN -->
+    <script>
+        const toggleButton = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.menu')
+        
+        toggleButton.addEventListener('click', function(){
+            nav.classList.toggle('open');
+        });
+    </script>
+    
+    <!-- BG COLLAGE PARALLAX -->
+    <script>
+        const content = document.querySelector('.content-wrapper');
+        const background = document.querySelector('.background');
+  
+        content.addEventListener('scroll', function(){
+        // Move background diff speed than content scroll
+        const scrollPos = content.scrollTop;
+        background.style.transform = `translateY(${-scrollPos * 5}px)`;
+        });
+    </script>    
+        
+    </body>
+</html>

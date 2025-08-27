@@ -25,7 +25,7 @@
             
             <div id="menu-container"></div>
             
-            <!-- Menu -->
+            <!-- Menu
             <div class="menu-section">
                 <button class="menu-toggle">☰ Menu</button>
                 <nav class="menu">
@@ -43,13 +43,16 @@
                     <a href="#">Contact </a>
                     <a href="#">Support</a>
                 </nav>
-            </div>
+            </div> -->
             
             
             <!-- Main Content -->
             <div class="content-wrapper">
                         
-                <header><h1>New Season! New Website! (╯°□°）╯</h1></header>        
+                <div class="content-header">
+                    <header><h1>New Season! New Website! (╯°□°）╯</h1></header>  
+                </div>
+                
                 <div class="content-LR-wrapper">
                     <div class="content-left">
                         <header><h2><span style="text-decoration: underline;">Upcoming Events</span></h2></header>
@@ -119,11 +122,13 @@
             .Updated Aug 2025.
             <br /><br />
             Follow us on Instagram!
-            <img src="images/insta_logo_white.png" style="width: 100px; height: auto;" alt="@_riddles_three_">
+            <a href="https://www.instagram.com/_riddles_three_/">
+                <img src="images/insta_logo_white.png" style="width: 80px; height: auto;" alt="@_riddles_three_">
+            </a>
         </div>
         
     
-    <!-- LOAD MENU DYNAMICALLY
+    <!-- LOAD MENU DYNAMICALLY -->
     <script>
     fetch('R3_menu.html')
       .then(function(response){ return response.text()})  // Get the HTML as text
@@ -132,7 +137,7 @@
       })
       .catch(function(error){ return console.error('Error loading menu:', error)});
     </script>
-    -->
+    
         
     <!-- MENU DROP DOWN -->
     <script>
@@ -152,7 +157,7 @@
         content.addEventListener('scroll', function(){
         // Move background diff speed than content scroll
         const scrollPos = content.scrollTop;
-        background.style.transform = `translateY(${-scrollPos * 5}px)`;
+        background.style.transform = `translateY(${-scrollPos * .5}px)`;
         });
     </script>    
         

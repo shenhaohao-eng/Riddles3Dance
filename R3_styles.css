@@ -1,29 +1,3 @@
-.share-tech-mono-regular {
-  font-family: "Share Tech Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-}
-.farro-light {
-  font-family: "Farro", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-.farro-regular {
-  font-family: "Farro", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.farro-medium {
-  font-family: "Farro", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-.farro-bold {
-  font-family: "Farro", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
 body{
   margin: 0;
   background: black;
@@ -56,17 +30,22 @@ h2{
 }
 
 /* Background collage */
-.background {
+.background{
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 4436px; /* taller than container for scroll effect */
-  background: url('Images/bg_collage_1.png') center top / cover no-repeat;
   overflow: hidden;
   transform: translateY(0);
   z-index: 1; 
   pointer-events: none; /* don't block clicks */
+}
+body.home .background{
+  background: url('Images/bg_collage_1.png') center top / cover no-repeat;
+}
+body.about .background{
+  background: url('Images/bg_collage_1.png') center 335%/ cover no-repeat;
 }
 
 /* Camera overlay */

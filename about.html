@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <title>Riddles Three Dance Co</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+                
+        <link rel="stylesheet" href="R3_styles.css" />
+        <link rel="icon" href="Images/R3_favicon.png" type="image/png">
+        <script src="script.js"></script>
+    </head>
+    <body class="about">
+        
+        <div class="page-wrapper">
+            
+            <!-- Backrgound -->
+            <div class="background"></div>
+                
+            <!-- Camera overlay -->
+            <div class="camera-overlay"></div>
+            
+            <div id="menu-container"></div>
+            
+            <!-- Menu
+            <div class="menu-section">
+                <button class="menu-toggle">☰ Menu</button>
+                <nav class="menu">
+                    <a href="#">Home </a>
+
+                    <div class="about-dropdown">
+                        <a href="#">About </a>
+                        <div class="about-dropdown-content">
+                            <a href="#">Persi </a>
+                            <a href="#">Dancers </a>        
+                        </div>
+                    </div>
+
+                    <a href="#">Gallery </a>
+                    <a href="#">Contact </a>
+                    <a href="#">Support</a>
+                </nav>
+            </div> -->
+            
+            
+            <!-- Main Content -->
+            <div class="content-wrapper">
+                        
+                <div class="content-header">
+                    <header><h1>based in HOUSTON,TX</h1></header>  
+                </div>
+                
+                <div class="content-LR-wrapper">
+                    <div class="content-left">
+                        <header><h2><span style="text-decoration: underline;">are? Who we</span></h2></header>
+                        
+                        <div class="event-title">
+                            FOUNDED IN 2024
+                        </div>
+                        <div class="event-desc">
+                            Riddles Three Contemporary Dance was created by Detroit-native Persi Mey, after a relocation
+                            to Houston in 2022.                            
+                            <br />
+                            <br /><span style="font-weight: 800;">Cliff:</span> So why is it called Riddles Three?
+                            <br /><span style="font-weight: 800;">Persi:</span> You know why already
+                            <br /><span style="font-weight: 800;">Cliff:</span> Okay but if you were explaining it to someone who doesn't already know
+                            <br /><span style="font-weight: 800;">Persi:</span> I like the idea of that story, with the troll, and he goes like "yOu hAve To aNswER mY riddLeS THreE to pAsS"
+                            <br /><span style="font-weight: 800;">Cliff:</span> The troll
+                            <br /><span style="font-weight: 800;">Persi:</span> Yes the troll under the bridge
+                            <br /><span style="font-weight: 800;">Cliff:</span> I think the troll under the bridge is from Three Billy Goats Gruff and he doesn't ask any riddles
+                            <br /><span style="font-weight: 800;">Persi:</span> ...
+                            <br /><span style="font-weight: 800;">Cliff:</span> I think you're thinking of Monty Python and the Holy Grail anyways so what kind of stuff does Riddles Three Dance Company do and what are you looking forward to the most in your second official season? 
+                            <br /><span style="font-weight: 800;">Persi:</span> ...
+                        <!--<br /><span style="font-weight: 800;">Cliff:</span> 
+                            <br /><span style="font-weight: 800;">Persi:</span>-->
+                        </div>
+                        <br />
+                        
+                    </div>
+                    
+                    <!--<div class="content-right">
+                        <header><h2>~~ Open Classes! ~~</h2></header>
+                        CONDITIONING FOR CONTEMPORARY TECHNIQUES
+                        <br /><mark><span style="font-weight: bold;"> EVERY TUES &amp; THURS</span></mark>
+                        <br /><mark><span style="font-weight: bold;"> @HOUSTON MET DANCE</span></mark>
+                        <br /><mark><span style="font-weight: bold;"> 9:00AM-11:30AM</span></mark>
+                        <br /><a href="https://www.metdance.org/ci-and-contemporary-conditioning">https://www.metdance.org/ci-and-contemporary-conditioning</a>
+                        <br /> Led by Persi Mey
+                        <br />
+                        <br /> Want to get strong?
+                        Want to roll around on the floor with style?
+                        Come join us for open class,
+                        made accessible for any skill level.
+                        Check the Met-Dance website for current schedule (link above)
+                        Pre-registration not required! Just show up!
+                    </div>-->
+                </div>
+                
+                <div class="banner1">
+                    <header><h2 id="persi">PERSI</h2></header>
+                    Persi has everyones bios
+                    <br /><br />
+                    but not her own?
+                    <br />
+                    <!--<button onclick="buttonClicked()">Why?</button>
+                    <br /><br />
+                    <div id="exbuttonDiv"></div>-->
+                </div>
+                <div class="banner1">
+                    <header><h2 id="dancers">CURRENT COMPANY MEMBERS</h2></header>
+                    bios, pics, social media?
+                    <br /><br />
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="footer">
+            <br /><br />
+            .Updated Aug 2025.
+            <br /><br />
+            Follow us on Instagram!
+            <a href="https://www.instagram.com/_riddles_three_/">
+                <img src="Images/insta_logo_white.png" style="width: 80px; height: auto;" alt="@_riddles_three_">
+            </a>
+        </div>
+        
+    
+    <!-- LOAD MENU DYNAMICALLY -->
+    <script>
+    fetch('R3_menu.html')
+      .then(function(response){ return response.text()})  // Get the HTML as text
+      .then(function(html){
+        document.getElementById('menu-container').innerHTML = html;
+      })
+      .catch(function(error){ return console.error('Error loading menu:', error)});
+    </script>
+    
+        
+    <!-- MENU DROP DOWN -->
+    <script>
+        const toggleButton = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.menu')
+        
+        toggleButton.addEventListener('click', function(){
+            nav.classList.toggle('open');
+        });
+    </script>
+    
+    <!-- BG COLLAGE PARALLAX -->
+    <script>
+        const content = document.querySelector('.content-wrapper');
+        const background = document.querySelector('.background');
+  
+        content.addEventListener('scroll', function(){
+        // Move background diff speed than content scroll
+        const scrollPos = content.scrollTop;
+        background.style.transform = `translateY(${-scrollPos * .5}px)`;
+        });
+    </script>    
+        
+    </body>
+</html>

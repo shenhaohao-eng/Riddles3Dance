@@ -60,6 +60,8 @@
         .slide p.left,
         .slide-inner p.left{
             text-align: left;
+            overflow-y: auto;
+            align-items: flex-start;
         }
         .slide-inner.right h1,
         .slide-inner.right p,

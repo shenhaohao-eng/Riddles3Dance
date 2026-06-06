@@ -52,16 +52,17 @@
             text-align: center;
             margin-top: 16px;
         }
-.slide-inner p.small-text{
-    font-size: clamp(0.6rem, 1.2vw, 0.9rem);
-}
-
+        .slide-inner p.small-text{
+            font-size: clamp(0.6rem, 1.2vw, 0.9rem);
+        }
+        .slide-inner p.scrollable{
+            overflow-y: auto;
+            align-items: flex-start;
+        }
 
         .slide p.left,
         .slide-inner p.left{
             text-align: left;
-            overflow-y: auto;
-            align-items: flex-start;
         }
         .slide-inner.right h1,
         .slide-inner.right p,
@@ -163,4 +164,11 @@
     border-color: rgb(255, 215, 0);  /* or whatever highlight color you want */
     box-shadow: 0 0 12px gold;
     transition: border-color 0.2s ease;
+}
+
+@media (max-wdith: 768px){
+    .slide-inner p.scrollable {
+        overflow-y: auto;
+        align-items: flex-start;
+    }
 }
